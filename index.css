@@ -84,7 +84,7 @@ button {
     width: 70%;
     min-width: 290px;
     height: 400px;
-    min-height: 400px;
+    min-height: fit-content;
     padding: 20px;
     text-align: center;
 }

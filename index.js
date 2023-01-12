@@ -1,4 +1,5 @@
 let countEl = document.getElementById("count-el")
+let saveElHeader = document.getElementById("save-el-header")
 let saveEl = document.getElementById("save-el")
 let resetBtn = document.getElementById("reset-btn")
 
@@ -7,21 +8,20 @@ function increment() {
 }
 
 function save() {
+    saveElHeader.textContent = "Previous entries:"
     saveEl.textContent += countEl.textContent + " - "
 
-    if(saveEl.style.display == "") { // empty string is the computed value of "display: none"
-        saveEl.style.display = "inline-block"
-        resetBtn.style.display = "inline"
+    if(resetBtn.style.display == "") { // empty string is the computed value of "display: none"
+        resetBtn.style.display = "inline-block"
     }
 
     countEl.textContent = 0
 }
 
 function reset() {
-    saveEl.textContent = "Previous entries: "
+    saveEl.textContent = saveElHeader.textContent = "" // "" reset back to the previous tag content
 
-    if(saveEl.style.display == "inline-block") {
-        saveEl.style.display = "" // empty string is the computed value of "display: none"
+    if(resetBtn.style.display == "inline-block") {
         resetBtn.style.display = ""
     }
 

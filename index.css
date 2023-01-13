@@ -80,6 +80,7 @@ button {
     width: 70%;
     min-width: 290px;
     height: 460px;
+    min-height: fit-comtent;
     padding: 20px;
     text-align: center;
 }

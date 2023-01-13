@@ -8,14 +8,12 @@ function increment() {
     countEl.textContent++
 }
 
-function save() {    
-    if(dash == 1) {
-        saveEl.textContent += " - "
-    }
-    
+function save() {
     if(dash == 0) {
         saveElHeader.textContent = "Previous entries:"
         dash = 1
+    } else {
+        saveEl.textContent += " - "
     }
 
     saveEl.textContent += countEl.textContent

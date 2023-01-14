@@ -18,7 +18,7 @@ function save() {
 
     saveEl.textContent += countEl.textContent
 
-    if(resetBtn.style.display == "") { // empty string is the computed value of "display: none"
+    if(resetBtn.style.display === "") { // empty string is the computed value of "display: none"
         resetBtn.style.display = "inline-block"
     }
     
@@ -28,7 +28,7 @@ function save() {
 function reset() {
     saveEl.textContent = saveElHeader.textContent = "" // "" reset back to the previous tag content
 
-    if(resetBtn.style.display == "inline-block") {
+    if(resetBtn.style.display === "inline-block") {
         resetBtn.style.display = ""
     }
 
